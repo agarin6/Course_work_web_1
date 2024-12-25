@@ -1,0 +1,530 @@
+/* ---------------------------------------------------
+   index.css
+   Основные стили для веб-сайта "Персонализированные Юридические Услуги"
+   Поддержка светлой и тёмной тем
+---------------------------------------------------- */
+
+/* Общие стили и сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CSS-переменные для светлой и тёмной тем */
+:root {
+    /* Светлая тема */
+    --background-color: #f9f9f9;
+    --text-color: #333333;
+    --header-background: #ffffff;
+    --header-text: #333333;
+    --navbar-link: #333333;
+    --navbar-link-hover: #007BFF;
+    --btn-background: #007BFF;
+    --btn-text: #ffffff;
+    --btn-hover-background: #0056b3;
+    --section-background: #ffffff;
+    --section-text: #333333;
+    --service-background: #ffffff;
+    --service-text: #333333;
+    --footer-background: #333333;
+    --footer-text: #ffffff;
+    --footer-link-hover: #007BFF;
+    --modal-background: rgba(0, 0, 0, 0.5);
+    --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    /* Тёмная тема */
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --header-background: #1f1f1f;
+    --header-text: #e0e0e0;
+    --navbar-link: #e0e0e0;
+    --navbar-link-hover: #bb86fc;
+    --btn-background: #bb86fc;
+    --btn-text: #121212;
+    --btn-hover-background: #9a67ea;
+    --section-background: #1f1f1f;
+    --section-text: #e0e0e0;
+    --service-background: #1f1f1f;
+    --service-text: #e0e0e0;
+    --footer-background: #1f1f1f;
+    --footer-text: #e0e0e0;
+    --footer-link-hover: #bb86fc;
+    --modal-background: rgba(255, 255, 255, 0.1);
+    --card-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Шапка сайта */
+.header {
+    background-color: var(--header-background);
+    color: var(--header-text);
+    box-shadow: 0 2px 4px var(--card-shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--header-text);
+    transition: color 0.3s;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--navbar-link);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--navbar-link-hover);
+}
+
+.theme-toggle {
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--btn-background);
+    color: var(--btn-text);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: var(--btn-hover-background);
+}
+
+/* Главный контент */
+main {
+    margin-top: 70px; /* Высота шапки */
+}
+
+/* Герой-секция */
+.hero {
+    background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Накладываем тёмный фильтр для читаемости текста */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--btn-background);
+    color: var(--btn-text);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-background);
+}
+
+/* О компании */
+.about {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Услуги */
+.services {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--btn-background);
+}
+
+.service-item p {
+    font-size: 1rem;
+    color: var(--service-text);
+}
+
+/* Преимущества */
+.advantages {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.advantages h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.advantages ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 0;
+}
+
+.advantages li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.advantages li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+/* Футер */
+.footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.footer .social-links img {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+    transition: filter 0.3s;
+}
+
+.footer .social-links a:hover img {
+    filter: invert(50%) sepia(100%) hue-rotate(200deg) saturate(500%);
+}
+
+/* Модальные окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background);
+    transition: background-color 0.3s;
+}
+
+.modal-content {
+    background-color: var(--section-background);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--card-shadow);
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    color: var(--section-text);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--btn-background);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        background-color: var(--header-background);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+        box-shadow: 0 2px 4px var(--card-shadow);
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar li {
+        margin: 15px 0;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+}
+
+/* Стилизация страницы "О компании" */
+
+.about-section {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mission {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mission h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.mission p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--btn-background);
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: var(--service-text);
+}
+
+.values {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.values h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.values ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 0;
+}
+
+.values li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.values li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    font-size: 1.2rem;
+}
