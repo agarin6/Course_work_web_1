@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блог | Персонализированные Юридические Услуги</title>
+    <title data-i18n="page_title_blog">Блог | Персонализированные Юридические Услуги</title>
     <link rel="stylesheet" href="../index.css">
 </head>
 
@@ -13,20 +13,22 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html">Юридическая Компания</a>
+                <a href="../index.html" data-i18n="logo">Юридическая Компания</a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="about.html">О компании</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="prices.html">Цены</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                    <li><a href="login.html">Личный кабинет</a></li>
+                    <li><a href="../index.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">О компании</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="prices.html" data-i18n="nav_prices">Цены</a></li>
+                    <li><a href="blog.html" data-i18n="nav_blog">Блог</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Контакты</a></li>
+                    <li><a href="login.html" data-i18n="nav_login">Личный кабинет</a></li>
                 </ul>
             </nav>
-            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+            <button id="themeToggle" class="theme-toggle" data-i18n="theme_toggle">Тёмная тема</button>
+            <!-- Кнопка для переключения языка -->
+            <button id="languageToggle" class="language-toggle">EN</button>
         </div>
     </header>
 
@@ -35,8 +37,8 @@
         <!-- Блок "Блог" -->
         <section class="blog-section">
             <div class="container">
-                <h1>Наш Блог</h1>
-                <p>Читайте последние статьи, новости и советы от наших экспертов в области юридических услуг.</p>
+                <h1 data-i18n="blog_section_title">Наш Блог</h1>
+                <p data-i18n="blog_section_description">Читайте последние статьи, новости и советы от наших экспертов в области юридических услуг.</p>
             </div>
         </section>
 
@@ -46,44 +48,34 @@
                 <div class="blog-grid">
                     <!-- Статья 1 -->
                     <article class="blog-post">
-                        <img src="../assets/images/blog1.jpg" alt="Заголовок статьи 1" class="blog-image">
+                        <img src="../assets/images/recent1.png" alt="Заголовок статьи 1" class="blog-image" data-i18n-alt="blog_post1_image_alt">
                         <div class="blog-details">
-                            <h2><a href="blog-post1.html">Преимущества использования юридических услуг для вашего
-                                    бизнеса</a></h2>
-                            <p class="blog-meta">Автор: Иван Иванов | Дата: 20.04.2024 | Категория: Корпоративное право
-                            </p>
-                            <p>В современном бизнесе юридическая поддержка играет ключевую роль в обеспечении
-                                стабильности и роста компании. В этой статье мы рассмотрим основные преимущества
-                                использования профессиональных юридических услуг...</p>
-                            <a href="blog-post1.html" class="read-more">Читать далее</a>
+                            <h2><a href="blog-post1.html" data-i18n="blog_post1_title">Преимущества использования юридических услуг для вашего бизнеса</a></h2>
+                            <p class="blog-meta" data-i18n="blog_post1_meta">Автор: Иван Иванов | Дата: 20.04.2024 | Категория: Корпоративное право</p>
+                            <p data-i18n="blog_post1_excerpt">В современном бизнесе юридическая поддержка играет ключевую роль в обеспечении стабильности и роста компании. В этой статье мы рассмотрим основные преимущества использования профессиональных юридических услуг...</p>
+                            <a href="blog-post1.html" class="read-more" data-i18n="blog_post1_read_more">Читать далее</a>
                         </div>
                     </article>
 
                     <!-- Статья 2 -->
                     <article class="blog-post">
-                        <img src="../assets/images/blog2.jpg" alt="Заголовок статьи 2" class="blog-image">
+                        <img src="../assets/images/recent2.jpg" alt="Заголовок статьи 2" class="blog-image" data-i18n-alt="blog_post2_image_alt">
                         <div class="blog-details">
-                            <h2><a href="blog-post2.html">Как выбрать правильного юриста для вашего дела</a></h2>
-                            <p class="blog-meta">Автор: Мария Петрова | Дата: 15.03.2024 | Категория: Выбор юриста</p>
-                            <p>Выбор юриста — важный шаг, который может существенно повлиять на исход вашего дела. В
-                                этой статье мы поделимся советами и рекомендациями, которые помогут вам сделать
-                                правильный выбор...</p>
-                            <a href="blog-post2.html" class="read-more">Читать далее</a>
+                            <h2><a href="blog-post2.html" data-i18n="blog_post2_title">Как выбрать правильного юриста для вашего дела</a></h2>
+                            <p class="blog-meta" data-i18n="blog_post2_meta">Автор: Мария Петрова | Дата: 15.03.2024 | Категория: Выбор юриста</p>
+                            <p data-i18n="blog_post2_excerpt">Выбор юриста — важный шаг, который может существенно повлиять на исход вашего дела. В этой статье мы поделимся советами и рекомендациями, которые помогут вам сделать правильный выбор...</p>
+                            <a href="blog-post2.html" class="read-more" data-i18n="blog_post2_read_more">Читать далее</a>
                         </div>
                     </article>
 
                     <!-- Статья 3 -->
                     <article class="blog-post">
-                        <img src="../assets/images/blog3.jpg" alt="Заголовок статьи 3" class="blog-image">
+                        <img src="../assets/images/recent3.jpg" alt="Заголовок статьи 3" class="blog-image" data-i18n-alt="blog_post3_image_alt">
                         <div class="blog-details">
-                            <h2><a href="blog-post3.html">Новые изменения в налоговом законодательстве 2024 года</a>
-                            </h2>
-                            <p class="blog-meta">Автор: Алексей Смирнов | Дата: 10.02.2024 | Категория: Налоговое право
-                            </p>
-                            <p>Каждый год законодательство претерпевает изменения, и налоговое право не является
-                                исключением. В данной статье мы рассмотрим ключевые изменения в налоговом
-                                законодательстве, вступившие в силу в 2024 году...</p>
-                            <a href="blog-post3.html" class="read-more">Читать далее</a>
+                            <h2><a href="blog-post3.html" data-i18n="blog_post3_title">Новые изменения в налоговом законодательстве 2024 года</a></h2>
+                            <p class="blog-meta" data-i18n="blog_post3_meta">Автор: Алексей Смирнов | Дата: 10.02.2024 | Категория: Налоговое право</p>
+                            <p data-i18n="blog_post3_excerpt">Каждый год законодательство претерпевает изменения, и налоговое право не является исключением. В данной статье мы рассмотрим ключевые изменения в налоговом законодательстве, вступившие в силу в 2024 году...</p>
+                            <a href="blog-post3.html" class="read-more" data-i18n="blog_post3_read_more">Читать далее</a>
                         </div>
                     </article>
 
@@ -97,42 +89,41 @@
             <div class="container">
                 <!-- Поиск по блогу -->
                 <div class="search-widget">
-                    <h3>Поиск</h3>
+                    <h3 data-i18n="sidebar_search_title">Поиск</h3>
                     <form action="#" method="get">
-                        <input type="text" name="search" placeholder="Поиск статей..." required>
-                        <button type="submit">Найти</button>
+                        <input type="text" name="search" placeholder="Поиск статей..." required data-i18n-placeholder="sidebar_search_placeholder">
+                        <button type="submit" data-i18n="sidebar_search_button">Найти</button>
                     </form>
                 </div>
 
                 <!-- Категории -->
                 <div class="categories-widget">
-                    <h3>Категории</h3>
+                    <h3 data-i18n="sidebar_categories_title">Категории</h3>
                     <ul>
-                        <li><a href="#">Корпоративное право</a></li>
-                        <li><a href="#">Налоговое право</a></li>
-                        <li><a href="#">Договорное право</a></li>
-                        <li><a href="#">Трудовое право</a></li>
-                        <li><a href="#">Международное право</a></li>
+                        <li><a href="#" data-i18n="sidebar_category_corporate">Корпоративное право</a></li>
+                        <li><a href="#" data-i18n="sidebar_category_tax">Налоговое право</a></li>
+                        <li><a href="#" data-i18n="sidebar_category_contracts">Договорное право</a></li>
+                        <li><a href="#" data-i18n="sidebar_category_labor">Трудовое право</a></li>
+                        <li><a href="#" data-i18n="sidebar_category_international">Международное право</a></li>
                         <!-- Добавьте больше категорий по необходимости -->
                     </ul>
                 </div>
 
                 <!-- Последние посты -->
                 <div class="recent-posts-widget">
-                    <h3>Последние посты</h3>
+                    <h3 data-i18n="sidebar_recent_posts_title">Последние посты</h3>
                     <ul>
                         <li>
-                            <img src="../assets/images/recent1.jpg" alt="Недавняя статья 1">
-                            <a href="blog-post1.html">Преимущества использования юридических услуг для вашего
-                                бизнеса</a>
+                            <img src="../assets/images/recent1.png" alt="Недавняя статья 1" data-i18n-alt="sidebar_recent_post1_image_alt">
+                            <a href="blog-post1.html" data-i18n="sidebar_recent_post1_title">Преимущества использования юридических услуг для вашего бизнеса</a>
                         </li>
                         <li>
-                            <img src="../assets/images/recent2.jpg" alt="Недавняя статья 2">
-                            <a href="blog-post2.html">Как выбрать правильного юриста для вашего дела</a>
+                            <img src="../assets/images/recent2.jpg" alt="Недавняя статья 2" data-i18n-alt="sidebar_recent_post2_image_alt">
+                            <a href="blog-post2.html" data-i18n="sidebar_recent_post2_title">Как выбрать правильного юриста для вашего дела</a>
                         </li>
                         <li>
-                            <img src="../assets/images/recent3.jpg" alt="Недавняя статья 3">
-                            <a href="blog-post3.html">Новые изменения в налоговом законодательстве 2024 года</a>
+                            <img src="../assets/images/recent3.jpg" alt="Недавняя статья 3" data-i18n-alt="sidebar_recent_post3_image_alt">
+                            <a href="blog-post3.html" data-i18n="sidebar_recent_post3_title">Новые изменения в налоговом законодательстве 2024 года</a>
                         </li>
                         <!-- Добавьте больше последних постов по необходимости -->
                     </ul>
@@ -140,12 +131,12 @@
 
                 <!-- Архив -->
                 <div class="archive-widget">
-                    <h3>Архив</h3>
+                    <h3 data-i18n="sidebar_archive_title">Архив</h3>
                     <ul>
-                        <li><a href="#">Апрель 2024</a></li>
-                        <li><a href="#">Март 2024</a></li>
-                        <li><a href="#">Февраль 2024</a></li>
-                        <li><a href="#">Январь 2024</a></li>
+                        <li><a href="#" data-i18n="sidebar_archive_april">Апрель 2024</a></li>
+                        <li><a href="#" data-i18n="sidebar_archive_march">Март 2024</a></li>
+                        <li><a href="#" data-i18n="sidebar_archive_february">Февраль 2024</a></li>
+                        <li><a href="#" data-i18n="sidebar_archive_january">Январь 2024</a></li>
                         <!-- Добавьте больше месяцев по необходимости -->
                     </ul>
                 </div>
@@ -156,16 +147,17 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <p data-i18n="footer_text">&copy; 2024 Юридическая Компания. Все права защищены.</p>
             <div class="social-links">
-                <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook" data-i18n-alt="footer_facebook_alt"></a>
+                <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter" data-i18n-alt="footer_twitter_alt"></a>
+                <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn" data-i18n-alt="footer_linkedin_alt"></a>
             </div>
         </div>
     </footer>
 
     <script src="../main.js"></script>
+    <script src="../translator.js"></script>
 </body>
 
 </html>

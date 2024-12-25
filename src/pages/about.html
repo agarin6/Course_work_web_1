@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О компании | Персонализированные Юридические Услуги</title>
+    <title data-i18n="page_title_about">О компании | Персонализированные Юридические Услуги</title>
     <link rel="stylesheet" href="../index.css">
 </head>
+
 <body>
     <!-- Шапка сайта -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html">Юридическая Компания</a>
+                <a href="../index.html" data-i18n="logo">Юридическая Компания</a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="about.html">О компании</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="prices.html">Цены</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                    <li><a href="login.html">Личный кабинет</a></li>
+                    <li><a href="../index.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">О компании</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="prices.html" data-i18n="nav_prices">Цены</a></li>
+                    <li><a href="blog.html" data-i18n="nav_blog">Блог</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Контакты</a></li>
+                    <li><a href="login.html" data-i18n="nav_login">Личный кабинет</a></li>
                 </ul>
             </nav>
-            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+            <button id="themeToggle" class="theme-toggle" data-i18n="theme_toggle">Тёмная тема</button>
+            <!-- Кнопка для переключения языка -->
+            <button id="languageToggle" class="language-toggle">EN</button>
         </div>
     </header>
 
@@ -33,40 +37,45 @@
         <!-- Блок "О компании" -->
         <section class="about-section">
             <div class="container">
-                <h1>О нашей компании</h1>
-                <p>Наша юридическая компания была основана в 2010 году с целью предоставления высококачественных юридических услуг для корпоративных клиентов. За годы работы мы зарекомендовали себя как надежного партнера, предлагающего индивидуальные решения для каждого клиента.</p>
+                <h1 data-i18n="about_section_title">О нашей компании</h1>
+                <p data-i18n="about_section_description">Наша юридическая компания была основана в 2010 году с целью
+                    предоставления высококачественных юридических услуг для корпоративных клиентов. За годы работы мы
+                    зарекомендовали себя как надежного партнера, предлагающего индивидуальные решения для каждого
+                    клиента.</p>
             </div>
         </section>
 
         <!-- Блок "Наша миссия" -->
         <section class="mission">
             <div class="container">
-                <h2>Наша миссия</h2>
-                <p>Мы стремимся обеспечивать наших клиентов экспертной юридической поддержкой, способствуя успешному развитию их бизнеса и защите их интересов. Наша миссия — быть лидерами в области корпоративного права, предоставляя инновационные и эффективные решения.</p>
+                <h2 data-i18n="mission_title">Наша миссия</h2>
+                <p data-i18n="mission_description">Мы стремимся обеспечивать наших клиентов экспертной юридической
+                    поддержкой, способствуя успешному развитию их бизнеса и защите их интересов. Наша миссия — быть
+                    лидерами в области корпоративного права, предоставляя инновационные и эффективные решения.</p>
             </div>
         </section>
 
         <!-- Блок "Наша команда" -->
         <section class="team">
             <div class="container">
-                <h2>Наша команда</h2>
+                <h2 data-i18n="team_title">Наша команда</h2>
                 <div class="team-grid">
                     <div class="team-member">
-                        <img src="../assets/images/team1.jpg" alt="Имя Члена Команды">
-                        <h3>Иван Иванов</h3>
-                        <p>Генеральный директор</p>
+                        <img src="../assets/images/team1.jpg" alt="Иван Иванов" data-i18n="team_member1_alt">
+                        <h3 data-i18n="team_member1_name">Иван Иванов</h3>
+                        <p data-i18n="team_member1_position">Генеральный директор</p>
                     </div>
                     <div class="team-member">
-                        <img src="../assets/images/team2.jpg" alt="Имя Члена Команды">
-                        <h3>Мария Петрова</h3>
-                        <p>Главный юрисконсульт</p>
+                        <img src="../assets/images/team2.jpg" alt="Мария Петрова" data-i18n="team_member2_alt">
+                        <h3 data-i18n="team_member2_name">Мария Петрова</h3>
+                        <p data-i18n="team_member2_position">Главный юрисконсульт</p>
                     </div>
                     <div class="team-member">
-                        <img src="../assets/images/team3.jpg" alt="Имя Члена Команды">
-                        <h3>Алексей Смирнов</h3>
-                        <p>Менеджер по работе с клиентами</p>
+                        <img src="../assets/images/team3.jpg" alt="Алексей Смирнов" data-i18n="team_member3_alt">
+                        <h3 data-i18n="team_member3_name">Алексей Смирнов</h3>
+                        <p data-i18n="team_member3_position">Менеджер по работе с клиентами</p>
                     </div>
-                    <!-- Добавьте больше членов команды по необходимости -->
+                    <!-- Добавьте больше членов команды по необходимости, не забудьте добавить атрибуты data-i18n -->
                 </div>
             </div>
         </section>
@@ -74,12 +83,12 @@
         <!-- Блок "Наши ценности" -->
         <section class="values">
             <div class="container">
-                <h2>Наши ценности</h2>
+                <h2 data-i18n="values_title">Наши ценности</h2>
                 <ul>
-                    <li>Профессионализм и экспертиза</li>
-                    <li>Индивидуальный подход</li>
-                    <li>Ответственность и надежность</li>
-                    <li>Инновации и развитие</li>
+                    <li data-i18n="value_professionalism">Профессионализм и экспертиза</li>
+                    <li data-i18n="value_individual_approach">Индивидуальный подход</li>
+                    <li data-i18n="value_responsibility">Ответственность и надежность</li>
+                    <li data-i18n="value_innovation">Инновации и развитие</li>
                 </ul>
             </div>
         </section>
@@ -88,7 +97,7 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <p data-i18n="footer_text">&copy; 2024 Юридическая Компания. Все права защищены.</p>
             <div class="social-links">
                 <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
@@ -98,5 +107,7 @@
     </footer>
 
     <script src="../main.js"></script>
+    <script src="../translator.js"></script>
 </body>
+
 </html>

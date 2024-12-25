@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Цены | Персонализированные Юридические Услуги</title>
+    <title data-i18n="page_title_prices">Цены | Персонализированные Юридические Услуги</title>
     <link rel="stylesheet" href="../index.css">
 </head>
 <body>
@@ -11,20 +11,22 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html">Юридическая Компания</a>
+                <a href="../index.html" data-i18n="logo">Юридическая Компания</a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="about.html">О компании</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="prices.html">Цены</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                    <li><a href="login.html">Личный кабинет</a></li>
+                    <li><a href="../index.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">О компании</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="prices.html" data-i18n="nav_prices">Цены</a></li>
+                    <li><a href="blog.html" data-i18n="nav_blog">Блог</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Контакты</a></li>
+                    <li><a href="login.html" data-i18n="nav_login">Личный кабинет</a></li>
                 </ul>
             </nav>
-            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+            <button id="themeToggle" class="theme-toggle" data-i18n="theme_toggle">Тёмная тема</button>
+            <!-- Кнопка для переключения языка -->
+            <button id="languageToggle" class="language-toggle">EN</button>
         </div>
     </header>
 
@@ -33,8 +35,8 @@
         <!-- Блок "Наши цены" -->
         <section class="pricing-section">
             <div class="container">
-                <h1>Наши цены</h1>
-                <p>Мы предлагаем прозрачную и конкурентоспособную ценовую политику, адаптированную под потребности каждого клиента.</p>
+                <h1 data-i18n="pricing_section_title">Наши цены</h1>
+                <p data-i18n="pricing_section_description">Мы предлагаем прозрачную и конкурентоспособную ценовую политику, адаптированную под потребности каждого клиента.</p>
             </div>
         </section>
 
@@ -44,38 +46,47 @@
                 <div class="pricing-grid">
                     <!-- Тарифный план 1 -->
                     <div class="pricing-card">
-                        <h3>Базовый</h3>
-                        <p class="price">5 000 <span>₽/месяц</span></p>
+                        <h3 data-i18n="pricing_plan_basic_title">Базовый</h3>
+                        <p class="price">
+                            <span data-i18n="pricing_plan_basic_price">5 000</span> 
+                            <span data-i18n="pricing_plan_basic_currency">₽/месяц</span>
+                        </p>
                         <ul>
-                            <li>Консультации до 2 часов</li>
-                            <li>Разработка стандартных договоров</li>
-                            <li>Доступ к онлайн-ресурсам</li>
+                            <li data-i18n="pricing_plan_basic_feature1">Консультации до 2 часов</li>
+                            <li data-i18n="pricing_plan_basic_feature2">Разработка стандартных договоров</li>
+                            <li data-i18n="pricing_plan_basic_feature3">Доступ к онлайн-ресурсам</li>
                         </ul>
-                        <a href="contact.html" class="btn">Выбрать</a>
+                        <a href="contact.html" class="btn" data-i18n="pricing_plan_basic_button">Выбрать</a>
                     </div>
                     <!-- Тарифный план 2 -->
                     <div class="pricing-card popular">
-                        <h3>Стандартный</h3>
-                        <p class="price">10 000 <span>₽/месяц</span></p>
+                        <h3 data-i18n="pricing_plan_standard_title">Стандартный</h3>
+                        <p class="price">
+                            <span data-i18n="pricing_plan_standard_price">10 000</span> 
+                            <span data-i18n="pricing_plan_standard_currency">₽/месяц</span>
+                        </p>
                         <ul>
-                            <li>Консультации до 5 часов</li>
-                            <li>Разработка и анализ договоров</li>
-                            <li>Представительство в суде</li>
-                            <li>Налоговое консультирование</li>
+                            <li data-i18n="pricing_plan_standard_feature1">Консультации до 5 часов</li>
+                            <li data-i18n="pricing_plan_standard_feature2">Разработка и анализ договоров</li>
+                            <li data-i18n="pricing_plan_standard_feature3">Представительство в суде</li>
+                            <li data-i18n="pricing_plan_standard_feature4">Налоговое консультирование</li>
                         </ul>
-                        <a href="contact.html" class="btn">Выбрать</a>
+                        <a href="contact.html" class="btn" data-i18n="pricing_plan_standard_button">Выбрать</a>
                     </div>
                     <!-- Тарифный план 3 -->
                     <div class="pricing-card">
-                        <h3>Премиум</h3>
-                        <p class="price">20 000 <span>₽/месяц</span></p>
+                        <h3 data-i18n="pricing_plan_premium_title">Премиум</h3>
+                        <p class="price">
+                            <span data-i18n="pricing_plan_premium_price">20 000</span> 
+                            <span data-i18n="pricing_plan_premium_currency">₽/месяц</span>
+                        </p>
                         <ul>
-                            <li>Неограниченные консультации</li>
-                            <li>Комплексное юридическое сопровождение</li>
-                            <li>Индивидуальные решения для бизнеса</li>
-                            <li>Приоритетная поддержка</li>
+                            <li data-i18n="pricing_plan_premium_feature1">Неограниченные консультации</li>
+                            <li data-i18n="pricing_plan_premium_feature2">Комплексное юридическое сопровождение</li>
+                            <li data-i18n="pricing_plan_premium_feature3">Индивидуальные решения для бизнеса</li>
+                            <li data-i18n="pricing_plan_premium_feature4">Приоритетная поддержка</li>
                         </ul>
-                        <a href="contact.html" class="btn">Выбрать</a>
+                        <a href="contact.html" class="btn" data-i18n="pricing_plan_premium_button">Выбрать</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +96,7 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <p data-i18n="footer_text">&copy; 2024 Юридическая Компания. Все права защищены.</p>
             <div class="social-links">
                 <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
@@ -95,5 +106,6 @@
     </footer>
 
     <script src="../main.js"></script>
+    <script src="../translator.js"></script>
 </body>
 </html>

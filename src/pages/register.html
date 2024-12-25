@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация | Личный кабинет</title>
+    <title data-i18n="page_title_register">Регистрация | Личный кабинет</title>
     <link rel="stylesheet" href="../index.css">
 </head>
 <body>
@@ -11,20 +11,22 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html">Юридическая Компания</a>
+                <a href="../index.html" data-i18n="logo">Юридическая Компания</a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="about.html">О компании</a></li>
-                    <li><a href="services.html">Услуги</a></li>
-                    <li><a href="prices.html">Цены</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
-                    <li><a href="login.html">Войти</a></li>
+                    <li><a href="../index.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">О компании</a></li>
+                    <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="prices.html" data-i18n="nav_prices">Цены</a></li>
+                    <li><a href="blog.html" data-i18n="nav_blog">Блог</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Контакты</a></li>
+                    <li><a href="login.html" data-i18n="nav_login">Личный кабинет</a></li>
                 </ul>
             </nav>
-            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+            <button id="themeToggle" class="theme-toggle" data-i18n="theme_toggle">Тёмная тема</button>
+            <!-- Кнопка для переключения языка -->
+            <button id="languageToggle" class="language-toggle">EN</button>
         </div>
     </header>
 
@@ -33,23 +35,23 @@
         <!-- Блок "Регистрация" -->
         <section class="register-section">
             <div class="container">
-                <h1>Регистрация</h1>
+                <h1 data-i18n="register_title">Регистрация</h1>
                 <form id="registerForm" class="auth-form">
-                    <label for="registerName">Имя:</label>
-                    <input type="text" id="registerName" name="name" placeholder="Ваше имя" required>
+                    <label for="registerName" data-i18n="register_form_name_label">Имя:</label>
+                    <input type="text" id="registerName" name="name" placeholder="Ваше имя" required data-i18n-placeholder="register_form_name_placeholder">
 
-                    <label for="registerEmail">Email:</label>
-                    <input type="email" id="registerEmail" name="email" placeholder="Ваш email" required>
+                    <label for="registerEmail" data-i18n="register_form_email_label">Email:</label>
+                    <input type="email" id="registerEmail" name="email" placeholder="Ваш email" required data-i18n-placeholder="register_form_email_placeholder">
 
-                    <label for="registerPassword">Пароль:</label>
-                    <input type="password" id="registerPassword" name="password" placeholder="Ваш пароль" required>
+                    <label for="registerPassword" data-i18n="register_form_password_label">Пароль:</label>
+                    <input type="password" id="registerPassword" name="password" placeholder="Ваш пароль" required data-i18n-placeholder="register_form_password_placeholder">
 
-                    <label for="registerConfirmPassword">Подтверждение пароля:</label>
-                    <input type="password" id="registerConfirmPassword" name="confirmPassword" placeholder="Подтвердите пароль" required>
+                    <label for="registerConfirmPassword" data-i18n="register_form_confirm_password_label">Подтверждение пароля:</label>
+                    <input type="password" id="registerConfirmPassword" name="confirmPassword" placeholder="Подтвердите пароль" required data-i18n-placeholder="register_form_confirm_password_placeholder">
 
-                    <button type="submit" class="btn">Зарегистрироваться</button>
+                    <button type="submit" class="btn" data-i18n="register_form_submit_button">Зарегистрироваться</button>
                 </form>
-                <p>Уже есть аккаунт? <a href="login.html">Войдите</a>.</p>
+                <p data-i18n="register_form_login_prompt">Уже есть аккаунт? <a href="login.html" data-i18n="register_form_login_link">Войдите</a>.</p>
             </div>
         </section>
     </main>
@@ -57,15 +59,24 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <p data-i18n="footer_text">&copy; 2024 Юридическая Компания. Все права защищены.</p>
             <div class="social-links">
-                <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook" data-i18n-alt="social_facebook_alt"></a>
+                <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter" data-i18n-alt="social_twitter_alt"></a>
+                <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn" data-i18n-alt="social_linkedin_alt"></a>
             </div>
         </div>
     </footer>
 
+    <!-- Модальное окно уведомления -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p data-i18n="notification_register_success">Ваш аккаунт успешно создан! Добро пожаловать.</p>
+        </div>
+    </div>
+
     <script src="../main.js"></script>
+    <script src="../translator.js"></script>
 </body>
 </html>
