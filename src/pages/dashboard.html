@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Юридическая Компания</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Юридическая Компания</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="prices.html">Цены</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="#" id="logoutBtn">Выйти</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+        </div>
+    </header>
+
+    <!-- Главный контент -->
+    <main>
+        <!-- Блок "Личный кабинет" -->
+        <section class="dashboard-section">
+            <div class="container">
+                <h1>Добро пожаловать, <span id="userName">Пользователь</span>!</h1>
+                <div class="dashboard-content">
+                    <div class="dashboard-info">
+                        <h2>Ваши данные</h2>
+                        <p><strong>Имя:</strong> <span id="displayName">Имя</span></p>
+                        <p><strong>Email:</strong> <span id="displayEmail">email@example.com</span></p>
+                    </div>
+                    <div class="dashboard-actions">
+                        <h2>Действия</h2>
+                        <a href="contact.html" class="btn">Связаться с нами</a>
+                        <!-- Добавьте другие действия по необходимости -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новый Блок "Персонализированные Предложения" -->
+        <section class="offers-section">
+            <div class="container">
+                <h2>Персонализированные Предложения</h2>
+                <div id="offersList" class="offers-list">
+                    <!-- Предложения будут динамически добавлены здесь -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход | Личный кабинет</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">Юридическая Компания</a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="prices.html">Цены</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+        </div>
+    </header>
+
+    <!-- Главный контент -->
+    <main>
+        <!-- Блок "Вход" -->
+        <section class="login-section">
+            <div class="container">
+                <h1>Вход</h1>
+                <form id="loginForm" class="auth-form">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="Ваш email" required>
+
+                    <label for="loginPassword">Пароль:</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="Ваш пароль" required>
+
+                    <button type="submit" class="btn">Войти</button>
+                </form>
+                <p>Еще нет аккаунта? <a href="register.html">Зарегистрируйтесь</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="../assets/icons/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
