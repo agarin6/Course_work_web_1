@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Персонализированные Юридические Услуги</title>
+    <title data-i18n="title">Персонализированные Юридические Услуги</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -13,20 +13,22 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html">Юридическая Компания</a>
+                <a href="index.html" data-i18n="logo">Юридическая Компания</a>
             </div>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="./pages/about.html">О компании</a></li>
-                    <li><a href="./pages/services.html">Услуги</a></li>
-                    <li><a href="./pages/prices.html">Цены</a></li>
-                    <li><a href="./pages/blog.html">Блог</a></li>
-                    <li><a href="./pages/contact.html">Контакты</a></li>
-                    <li><a href="./pages/login.html">Личный кабинет</a></li>
+                    <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+                    <li><a href="./pages/about.html" data-i18n="nav_about">О компании</a></li>
+                    <li><a href="./pages/services.html" data-i18n="nav_services">Услуги</a></li>
+                    <li><a href="./pages/prices.html" data-i18n="nav_prices">Цены</a></li>
+                    <li><a href="./pages/blog.html" data-i18n="nav_blog">Блог</a></li>
+                    <li><a href="./pages/contact.html" data-i18n="nav_contact">Контакты</a></li>
+                    <li><a href="./pages/login.html" data-i18n="nav_login">Личный кабинет</a></li>
                 </ul>
             </nav>
-            <button id="themeToggle" class="theme-toggle">Тёмная тема</button>
+            <button id="themeToggle" class="theme-toggle" data-i18n="theme_toggle">Тёмная тема</button>
+            <!-- Кнопка для переключения языка -->
+            <button id="languageToggle" class="language-toggle">EN</button>
         </div>
     </header>
 
@@ -35,17 +37,19 @@
         <!-- Герой-секция -->
         <section class="hero">
             <div class="container">
-                <h1>Персонализированные Юридические Услуги</h1>
-                <p>Мы предоставляем качественные юридические решения, адаптированные под ваши нужды.</p>
-                <a href="services.html" class="btn">Наши услуги</a>
+                <h1 data-i18n="hero_title">Персонализированные Юридические Услуги</h1>
+                <p data-i18n="hero_subtitle">Мы предоставляем качественные юридические решения, адаптированные под ваши
+                    нужды.</p>
+                <a href="./pages/services.html" class="btn" data-i18n="hero_button">Наши услуги</a>
             </div>
         </section>
 
         <!-- О компании -->
         <section class="about">
             <div class="container">
-                <h2>О нашей компании</h2>
-                <p>Наша юридическая компания обладает многолетним опытом в предоставлении высококачественных юридических
+                <h2 data-i18n="about_title">О нашей компании</h2>
+                <p data-i18n="about_description">Наша юридическая компания обладает многолетним опытом в предоставлении
+                    высококачественных юридических
                     услуг для корпоративных клиентов. Мы стремимся обеспечить наших клиентов персонализированными
                     решениями, которые соответствуют их уникальным потребностям.</p>
             </div>
@@ -54,23 +58,25 @@
         <!-- Услуги -->
         <section class="services">
             <div class="container">
-                <h2>Наши услуги</h2>
+                <h2 data-i18n="services_title">Наши услуги</h2>
                 <div class="services-grid">
                     <div class="service-item">
-                        <h3>Консультации</h3>
-                        <p>Профессиональные юридические консультации по различным вопросам.</p>
+                        <h3 data-i18n="service_consultations">Консультации</h3>
+                        <p data-i18n="service_consultations_desc">Профессиональные юридические консультации по различным
+                            вопросам.</p>
                     </div>
                     <div class="service-item">
-                        <h3>Договорное право</h3>
-                        <p>Разработка и анализ договоров, защита ваших интересов.</p>
+                        <h3 data-i18n="service_contracts">Договорное право</h3>
+                        <p data-i18n="service_contracts_desc">Разработка и анализ договоров, защита ваших интересов.</p>
                     </div>
                     <div class="service-item">
-                        <h3>Представительство в суде</h3>
-                        <p>Эффективное представление ваших интересов в судебных инстанциях.</p>
+                        <h3 data-i18n="service_litigation">Представительство в суде</h3>
+                        <p data-i18n="service_litigation_desc">Эффективное представление ваших интересов в судебных
+                            инстанциях.</p>
                     </div>
                     <div class="service-item">
-                        <h3>Корпоративное право</h3>
-                        <p>Юридическое сопровождение бизнеса на всех этапах.</p>
+                        <h3 data-i18n="service_corporate">Корпоративное право</h3>
+                        <p data-i18n="service_corporate_desc">Юридическое сопровождение бизнеса на всех этапах.</p>
                     </div>
                 </div>
             </div>
@@ -79,12 +85,12 @@
         <!-- Преимущества -->
         <section class="advantages">
             <div class="container">
-                <h2>Почему выбирают нас</h2>
+                <h2 data-i18n="advantages_title">Почему выбирают нас</h2>
                 <ul>
-                    <li>Опытная команда профессионалов</li>
-                    <li>Индивидуальный подход к каждому клиенту</li>
-                    <li>Высокий уровень ответственности и этики</li>
-                    <li>Комплексные решения для бизнеса</li>
+                    <li data-i18n="advantage_experienced">Опытная команда профессионалов</li>
+                    <li data-i18n="advantage_individual">Индивидуальный подход к каждому клиенту</li>
+                    <li data-i18n="advantage_responsibility">Высокий уровень ответственности и этики</li>
+                    <li data-i18n="advantage_comprehensive">Комплексные решения для бизнеса</li>
                 </ul>
             </div>
         </section>
@@ -93,7 +99,7 @@
     <!-- Футер -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Юридическая Компания. Все права защищены.</p>
+            <p data-i18n="footer_text">&copy; 2024 Юридическая Компания. Все права защищены.</p>
             <div class="social-links">
                 <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
@@ -103,6 +109,7 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="translator.js"></script>
 </body>
 
 </html>
