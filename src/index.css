@@ -139,7 +139,8 @@ body {
 
 /* Главный контент */
 main {
-    margin-top: 70px; /* Высота шапки */
+    margin-top: 70px;
+    /* Высота шапки */
 }
 
 /* Герой-секция */
@@ -160,7 +161,8 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Накладываем тёмный фильтр для читаемости текста */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Накладываем тёмный фильтр для читаемости текста */
 }
 
 .hero .container {
@@ -329,7 +331,8 @@ main {
 
 /* Модальные окна */
 .modal {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
+    /* Скрыто по умолчанию */
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -527,4 +530,943 @@ main {
     top: 0;
     color: #28a745;
     font-size: 1.2rem;
+}
+
+.pricing-section {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pricing-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.pricing-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Тарифные планы */
+.pricing-plans {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pricing-plans .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.pricing-card {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.pricing-card.popular {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    border: 2px solid var(--btn-background);
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--btn-background);
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.pricing-card .price span {
+    font-size: 1rem;
+    color: var(--service-text);
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.pricing-card ul li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    font-size: 1.2rem;
+}
+
+.pricing-card .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* Адаптивность для Тарифных Планов */
+@media (max-width: 768px) {
+    .pricing-section h1 {
+        font-size: 2rem;
+    }
+
+    .pricing-section p {
+        font-size: 1rem;
+    }
+
+    .pricing-card {
+        padding: 20px 15px;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .pricing-card .price {
+        font-size: 1.5rem;
+    }
+}
+
+/* ---------------------------------------------------
+   Дополнительные стили для страницы "Блог"
+---------------------------------------------------- */
+
+/* Блок "Блог" */
+.blog-section {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.blog-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.blog-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Основной контент блога */
+.blog-content {
+    padding: 40px 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    width: calc(33.333% - 20px);
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-details {
+    padding: 20px;
+}
+
+.blog-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-details h2 a {
+    text-decoration: none;
+    color: var(--btn-background);
+    transition: color 0.3s;
+}
+
+.blog-details h2 a:hover {
+    color: var(--btn-hover-background);
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+    color: var(--service-text);
+    margin-bottom: 15px;
+}
+
+.blog-meta a {
+    text-decoration: none;
+    color: var(--navbar-link);
+    transition: color 0.3s;
+}
+
+.blog-meta a:hover {
+    color: var(--navbar-link-hover);
+}
+
+.blog-details p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: var(--btn-background);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: var(--btn-hover-background);
+}
+
+/* Боковая панель */
+.sidebar {
+    background-color: var(--section-background);
+    color: var(--section-text);
+    padding: 40px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.search-widget,
+.categories-widget,
+.recent-posts-widget,
+.archive-widget {
+    background-color: var(--service-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.search-widget h3,
+.categories-widget h3,
+.recent-posts-widget h3,
+.archive-widget h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.search-widget form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-widget input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.search-widget input[type="text"]:focus {
+    border-color: var(--btn-background);
+    outline: none;
+}
+
+.search-widget button {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--btn-background);
+    color: var(--btn-text);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.search-widget button:hover {
+    background-color: var(--btn-hover-background);
+}
+
+.categories-widget ul,
+.recent-posts-widget ul,
+.archive-widget ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.categories-widget ul li,
+.archive-widget ul li {
+    margin-bottom: 10px;
+}
+
+.categories-widget ul li a,
+.archive-widget ul li a {
+    text-decoration: none;
+    color: var(--navbar-link);
+    transition: color 0.3s;
+}
+
+.categories-widget ul li a:hover,
+.archive-widget ul li a:hover {
+    color: var(--navbar-link-hover);
+}
+
+.recent-posts-widget ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recent-posts-widget ul li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.recent-posts-widget ul li a {
+    text-decoration: none;
+    color: var(--navbar-link);
+    transition: color 0.3s;
+}
+
+.recent-posts-widget ul li a:hover {
+    color: var(--navbar-link-hover);
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 1024px) {
+    .blog-grid {
+        flex-direction: column;
+    }
+
+    .blog-post {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .blog-post {
+        width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+        /* Скрыть боковую панель на мобильных устройствах */
+    }
+}
+
+/* Стилизация страницы "Блог" */
+
+/* Статья блога */
+.single-blog-post {
+    padding: 80px 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.single-blog-post h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.single-blog-post .blog-meta {
+    font-size: 0.9rem;
+    color: var(--service-text);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-single-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.blog-content-full {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.blog-content-full h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--btn-background);
+}
+
+.blog-content-full p {
+    margin-bottom: 20px;
+}
+
+/* Адаптивность для Страницы "Блог" */
+@media (max-width: 768px) {
+    .blog-grid {
+        flex-direction: column;
+    }
+
+    .blog-post {
+        width: 100%;
+    }
+
+    .blog-content-full {
+        padding: 0 15px;
+    }
+
+    .single-blog-post h1 {
+        font-size: 2rem;
+    }
+
+    .single-blog-post .blog-meta {
+        font-size: 0.8rem;
+    }
+
+    .blog-content-full h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Стилизация блока "Комментарии" */
+
+.comments-section {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.comments-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#commentForm {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#commentForm label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+#commentForm input[type="text"],
+#commentForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+#commentForm input[type="text"]:focus,
+#commentForm textarea:focus {
+    border-color: var(--btn-background);
+    outline: none;
+}
+
+#commentForm .btn {
+    align-self: flex-start;
+}
+
+#commentsList {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comment {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment .comment-date {
+    font-size: 0.9rem;
+    color: var(--service-text);
+    margin-bottom: 10px;
+}
+
+.comment .comment-text {
+    font-size: 1rem;
+}
+
+/* ---------------------------------------------------
+   Дополнительные стили для страницы "Контакты"
+---------------------------------------------------- */
+
+/* Блок "Контакты" */
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Контактная форма и информация */
+.contact-content {
+    padding: 40px 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form h2,
+.contact-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--btn-background);
+    outline: none;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-info ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-info ul li a {
+    text-decoration: none;
+    color: var(--navbar-link);
+    transition: color 0.3s;
+}
+
+.contact-info ul li a:hover {
+    color: var(--navbar-link-hover);
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Социальные ссылки */
+.contact-info .social-links {
+    margin-top: 20px;
+}
+
+.contact-info .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.contact-info .social-links img {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%);
+    transition: filter 0.3s;
+}
+
+.contact-info .social-links a:hover img {
+    filter: invert(50%) sepia(100%) hue-rotate(200deg) saturate(500%);
+}
+
+/* Карта */
+.contact-map {
+    padding: 80px 0;
+    background-color: var(--section-background);
+    color: var(--section-text);
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.contact-map h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px var(--card-shadow);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: none;
+        width: 100%;
+    }
+
+    .contact-section h1 {
+        font-size: 2rem;
+    }
+
+    .contact-section p {
+        font-size: 1rem;
+    }
+
+    .contact-map h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Модальное окно уведомления */
+.modal {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-background);
+    transition: background-color 0.3s;
+}
+
+.modal-content {
+    background-color: var(--section-background);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--card-shadow);
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    color: var(--section-text);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.close {
+    color: var(--text-color);
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--btn-background);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   Дополнительные стили для страниц "Регистрация", "Вход" и "Личный кабинет"
+---------------------------------------------------- */
+
+/* Общие стили для форм аутентификации */
+.auth-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+.auth-form input[type="text"]:focus,
+.auth-form input[type="email"]:focus,
+.auth-form input[type="password"]:focus,
+.auth-form textarea:focus {
+    border-color: var(--btn-background);
+    outline: none;
+}
+
+.auth-form .btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--btn-background);
+    color: var(--btn-text);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-form .btn:hover {
+    background-color: var(--btn-hover-background);
+}
+
+/* Страница "Личный кабинет" */
+.dashboard-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.dashboard-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.dashboard-info,
+.dashboard-actions {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    max-width: 400px;
+    width: 100%;
+}
+
+.dashboard-info:hover,
+.dashboard-actions:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.dashboard-info h2,
+.dashboard-actions h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.dashboard-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .dashboard-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-info,
+    .dashboard-actions {
+        max-width: 100%;
+    }
+}
+
+/* ---------------------------------------------------
+   Дополнительные стили для персонализированных предложений
+---------------------------------------------------- */
+
+/* Стиль для секции предложений */
+.offers-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s;
+}
+
+.offers-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--section-text);
+    transition: color 0.3s;
+}
+
+/* Стиль для списка предложений */
+.offers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Стиль для отдельного предложения */
+.offer-card {
+    background-color: var(--service-background);
+    color: var(--service-text);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.offer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.offer-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.offer-card .offer-category {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--btn-background);
+}
+
+.offer-card .offer-action {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: var(--btn-background);
+    color: var(--btn-text);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.offer-card .offer-action:hover {
+    background-color: var(--btn-hover-background);
 }
